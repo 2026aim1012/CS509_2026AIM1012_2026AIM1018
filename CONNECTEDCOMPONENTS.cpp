@@ -4,11 +4,10 @@ using namespace std;
 
 void funcConnectedComponents(int V, const vector<int>& rowPtr, const vector<int>& colIdx, int &numComponents, vector<int>& compId) {
     numComponents = 0;
-    compId.assign(V, -1); // -1 indicates the vertex is unvisited
+    compId.assign(V, -1); 
 
     for (int i = 0; i < V; i++) {
         if (compId[i] == -1) {
-            // Unvisited vertex found, start a new component traversal
             vector<int> queue;
             queue.push_back(i);
             compId[i] = numComponents;
@@ -28,7 +27,6 @@ void funcConnectedComponents(int V, const vector<int>& rowPtr, const vector<int>
                     }
                 }
             }
-            // Increment the component ID for the next isolated group
             numComponents++;
         }
     }
