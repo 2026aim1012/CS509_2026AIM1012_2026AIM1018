@@ -52,7 +52,7 @@ int pushFlowDFS(int u, int flowIn, int sink, vector<vector<FlowEdge>>& adj, vect
     return 0;
 }
 
-MaxFlowResult runMaxFlowMincut(int V, const vector<int>& rowPtr, const vector<int>& colIdx, const vector<int>& weights, int source, int sink) {
+MaxFlowResult maxFlowMincutFunc(int V, const vector<int>& rowPtr, const vector<int>& colIdx, const vector<int>& weights, int source, int sink) {
     MaxFlowResult result;
     result.maxFlow = 0;
 
